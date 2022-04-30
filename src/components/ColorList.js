@@ -13,12 +13,21 @@ function ColorList() {
   const users = [
     {id: 1, firstName: "Duane", lastName: "Watson"},
     {id: 2, firstName: "Dwayne", lastName: "Johnson"},
-  ]
+  ];
+
+  // with non-unique arrays
+  const fib = [0, 1, 1, 3, 5];
+
   const userHeadings = users.map((user) => {
     return <h1 key={user.id}>{user.firstName} {user.lastName}</h1>
   })
+
   const colorElements = colors.map((color) => {
     return <li key={color} style={{color: color}}>{color}</li>
+  })
+
+  const fibList = fib.map((number, index) => {
+    return <div key={index}>{number}</div>
   })
 
   console.log(colorElements)
@@ -29,6 +38,7 @@ function ColorList() {
       <ol>
         {colorElements}
         {userHeadings}
+        {fibList}
       </ol>
     </div>
   );
