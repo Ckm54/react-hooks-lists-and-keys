@@ -28,6 +28,8 @@ function ColorList() {
   })
 
   const fibList = fib.map((number, index) => {
+
+    // not the best approach to assigning kays
     return <div key={index}>{number}</div>
   })
 
