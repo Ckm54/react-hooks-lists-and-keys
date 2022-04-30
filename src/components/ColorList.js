@@ -9,6 +9,14 @@ function ColorList() {
     "hotpink",
   ];
 
+  //with objects
+  const users = [
+    {id: 1, firstName: "Duane", lastName: "Watson"},
+    {id: 2, firstName: "Dwayne", lastName: "Johnson"},
+  ]
+  const userHeadings = users.map((user) => {
+    return <h1 key={user.id}>{user.firstName} {user.lastName}</h1>
+  })
   const colorElements = colors.map((color) => {
     return <li key={color} style={{color: color}}>{color}</li>
   })
@@ -20,6 +28,7 @@ function ColorList() {
       <h1>Top 5 CSS Colors</h1>
       <ol>
         {colorElements}
+        {userHeadings}
       </ol>
     </div>
   );
