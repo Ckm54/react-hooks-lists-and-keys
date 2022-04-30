@@ -1,4 +1,5 @@
 import React from "react";
+import ColorItem from "./ColorItem";
 
 function ColorList() {
   const colors = [
@@ -23,7 +24,7 @@ function ColorList() {
   })
 
   const colorElements = colors.map((color) => {
-    return <li key={color} style={{color: color}}>{color}</li>
+    return <ColorItem key={color} color = {color} />
   })
 
   const fibList = fib.map((number, index) => {
